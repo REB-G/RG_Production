@@ -4,10 +4,8 @@ namespace App\Controller\Admin;
 
 use App\Entity\HomePage;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
-use Vich\UploaderBundle\Form\Type\VichImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
@@ -33,18 +31,8 @@ class HomePageCrudController extends AbstractCrudController
             TextField::new('pageTitle', 'Titre de la page'),
             TextField::new('aboutSectionTitle', 'Titre de la section "À propos"'),
             TextareaField::new('aboutSectionText', 'Texte de la section "À propos"'),
-            TextField::new('aboutSectionImageFile')
-                ->setFormType(VichImageType::class),
-            ImageField::new('aboutSectionImageName', 'Image de la section "À propos"')
-                ->setBasePath('/uploads/enterprise')
-                ->onlyOnIndex(),
             TextField::new('servicesSectionTitle', 'Titre de la section "Services"'),
             TextareaField::new('servicesSectionText', 'Texte de la section "Services"'),
-            TextField::new('servicesSectionImageFile')
-                ->setFormType(VichImageType::class),
-            ImageField::new('servicesSectionImageName', 'Image de la section "Services"')
-                ->setBasePath('/uploads/enterprise')
-                ->onlyOnIndex(),
             TextField::new('projectsSectionTitle', 'Titre de la section "Réalisations"'),
             TextareaField::new('projectsSectionText', 'Texte de la section "Réalisations"'),
             TextField::new('contactSectionTitle', 'Titre de la section "Contact"'),

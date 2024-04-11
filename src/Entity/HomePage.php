@@ -5,12 +5,9 @@ namespace App\Entity;
 use App\Repository\HomePageRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\HttpFoundation\File\File;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: HomePageRepository::class)]
-#[Vich\Uploadable]
 class HomePage
 {
     #[ORM\Id]
@@ -45,12 +42,6 @@ class HomePage
     )]
     private ?string $aboutSectionText = null;
 
-    #[Vich\UploadableField(mapping: 'enterprise_images', fileNameProperty: 'aboutSectionImageName')]
-    private ?File $aboutSectionImageFile = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $aboutSectionImageName = null;
-
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank(message: 'Veuillez renseigner le titre de la section "Services".')]
     #[Assert\Length(
@@ -68,12 +59,6 @@ class HomePage
         maxMessage: "Le texte de la section \"Services\" ne doit pas dépasser 1255 caractères"
     )]
     private ?string $servicesSectionText = null;
-
-    #[Vich\UploadableField(mapping: 'enterprise_images', fileNameProperty: 'servicesSectionImageName')]
-    private ?File $servicesSectionImageFile = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $servicesSectionImageName = null;
 
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank(message: 'Veuillez renseigner le titre de la section "Services".')]
@@ -152,30 +137,6 @@ class HomePage
         return $this;
     }
 
-    public function getAboutSectionImageFile()
-    {
-        return $this->aboutSectionImageFile;
-    }
-
-    public function setAboutSectionImageFile(?string $aboutSectionImageFile): self
-    {
-        $this->aboutSectionImageFile = $aboutSectionImageFile;
-
-        return $this;
-    }
-
-    public function getAboutSectionImageName()
-    {
-        return $this->aboutSectionImageName;
-    }
-
-    public function setAboutSectionImageName(?string $aboutSectionImageName): self
-    {
-        $this->aboutSectionImageName = $aboutSectionImageName;
-
-        return $this;
-    }
-
     public function getServicesSectionTitle(): ?string
     {
         return $this->servicesSectionTitle;
@@ -196,30 +157,6 @@ class HomePage
     public function setServicesSectionText(string $servicesSectionText): static
     {
         $this->servicesSectionText = $servicesSectionText;
-
-        return $this;
-    }
-
-    public function getServicesSectionImageFile()
-    {
-        return $this->servicesSectionImageFile;
-    }
-
-    public function setServicesSectionImageFile(?string $servicesSectionImageFile): self
-    {
-        $this->servicesSectionImageFile = $servicesSectionImageFile;
-
-        return $this;
-    }
-
-    public function getServicesSectionImageName()
-    {
-        return $this->servicesSectionImageName;
-    }
-
-    public function setServicesSectionImageName(?string $servicesSectionImageName): self
-    {
-        $this->servicesSectionImageName = $servicesSectionImageName;
 
         return $this;
     }

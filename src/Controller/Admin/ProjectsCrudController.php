@@ -10,6 +10,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 
 class ProjectsCrudController extends AbstractCrudController
 {
@@ -41,7 +42,7 @@ class ProjectsCrudController extends AbstractCrudController
                 ->setBasePath('/uploads/enterprise')
                 ->onlyOnIndex(),
             TextField::new('link', 'Lien'),
-            TextField::new('author', 'Auteur'),
+            AssociationField::new('author', 'Auteur'),
         ];
     }
 }
