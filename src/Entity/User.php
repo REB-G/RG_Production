@@ -94,6 +94,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->projects = new ArrayCollection();
     }
 
+    public function __toString(): string
+    {
+        return $this->name . ' ' . $this->firstname;
+    }
+
     #[ORM\PreUpdate]
     public function preUpdatedAt(): void
     {
