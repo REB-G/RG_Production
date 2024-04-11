@@ -1,0 +1,33 @@
+@use "../utils/_main" as utils
+
+.footer
+    margin: 5%
+    margin-top: 10%
+    +utils.flex(column, center, center)
+
+    &__informations
+        +utils.flex(column, center, center)
+
+    &__copyright
+        font-size: 1rem
+        text-align: center
+
+.footer-contact-list
+    +utils.flex(column, center, center)
+
+    &__element
+        &--svg
+            width: 1rem
+            fill: utils.$gold
+
+        &--link
+            margin-left: 0.3rem
+            &:hover
+                color: utils.$gold
+
+.footer-legals
+    margin: 1rem
+
+    &__link
+        &:hover
+            color: utils.$gold

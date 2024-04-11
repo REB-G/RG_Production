@@ -1,0 +1,44 @@
+@use "../../utils/_main" as utils
+
+.contact-page
+    background-color: utils.$grey
+    color: black
+    +utils.flex(column, center, center)
+    padding-top: 10%
+    padding-bottom: 10%
+
+    &__div-for-background
+        background-color: utils.$grey
+        +utils.flex(column, center, center)
+
+    &__title
+        text-align: center
+
+    &__informations
+        margin-top: 5%
+        max-width: 90%
+        +utils.responsive('big-phone')
+            max-width: 100%
+
+        &--description
+            text-align: center
+
+        &--list-elements
+            margin-top: 5%
+
+
+.contact-page-list-element
+    +utils.flex(column, center, center)
+    margin-top: 15%
+
+    &__svg
+        width: 1.3rem
+        fill: utils.$gold
+
+    &__type-info
+        font-size: 1.3rem
+        margin: 5%
+
+    &__info
+        &:hover
+            color: utils.$gold

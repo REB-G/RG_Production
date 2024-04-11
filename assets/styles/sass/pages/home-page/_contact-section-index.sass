@@ -1,0 +1,64 @@
+@use "../../utils/_main" as utils
+
+.projects-contact-section
+    +utils.flex(row, center, center)
+    width: 100%
+
+    &__projects
+        width: 50%
+        height: 50%
+        +utils.flex(column, center, center)
+
+        &--text
+            margin: 5%
+            text-align: center
+
+        &--link
+            +utils.flex(row, center, center)
+
+        &--svg
+            width: 10%
+            fill: utils.$gold
+
+            &:hover
+                fill: utils.$grey
+
+.contact-section-index
+    +utils.flex(column, center, center)
+    width: 50%
+    height: 50%
+    color: black
+    padding-top: 15%
+    padding-bottom: 15%
+
+    &__div-for-background
+        background-color: utils.$grey
+        padding: 15%
+
+    &__title
+        text-align: center
+
+    &__informations
+        margin-top: 5%
+
+        &--description
+            text-align: center
+
+            &--list-elements
+                margin-top: 5%
+
+
+.contact-section-list-element
+    +utils.flex(column, center, center)
+    margin: 4%
+
+    &__svg
+        width: 1.3rem
+        fill: utils.$gold
+
+    &__type-info
+        font-size: 1.3rem
+
+    &__info
+        &:hover
+            color: utils.$gold

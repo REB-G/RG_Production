@@ -1,0 +1,31 @@
+@use "../../utils/_main" as utils
+
+.services-index
+    +utils.flex(row, center, center)
+    margin-top: 15%
+
+    &__image-section
+        width: 50%
+        height: 50%
+        +utils.flex(row, center, center)
+
+        &--image
+            // width: 100%
+            width: 70%
+
+    &__text-section
+        width: 50%
+        height: 50%
+        +utils.flex(column, center, center)
+        padding: 5%
+
+        &--title
+            font-size: 1.8rem
+            margin-bottom: 5%
+
+        &--text
+            font-size: 1.3rem
+            +utils.flex(column, center, center)
+
+.description-text-of-services-section-index
+    text-align: center

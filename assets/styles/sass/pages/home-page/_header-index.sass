@@ -1,0 +1,30 @@
+@use "../../utils/_main" as utils
+
+.header
+    width: 100%
+    height: 100vh
+    +utils.flex(column, space-around, center)
+    +utils.responsive('litle-tablet')
+        +utils.flex(column, center, center)
+
+    &__logo
+        width: 25rem
+        +utils.responsive('litle-tablet')
+            width: 30rem
+
+    &__discover-us
+        +utils.flex(column, center, center)
+        transition: opacity 5s ease-in-out
+
+        &--text
+            font-size: 1.3rem
+
+        &--svg
+            fill: utils.$grey
+            width: 1.3rem
+            margin: 0.5rem
+
+            &:hover
+                fill: utils.$gold
+                transition: 0.5s ease-in
+                cursor: pointer

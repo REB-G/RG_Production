@@ -1,0 +1,53 @@
+@use "../utils/_main" as utils
+
+.header-pages
+    +utils.flex(column, space-around, center)
+    +utils.responsive('litle-tablet')
+        +utils.flex(row, space-around, center)
+
+    &__design
+        +utils.flex(row, space-around, center)
+        width: 100%
+        +utils.responsive('litle-tablet')
+            width: 15rem
+
+        &--logo
+            width: 15rem
+
+        &--phone-menu-svg
+            width: 1.5rem
+            fill: utils.$grey
+            +utils.responsive('litle-tablet')
+                display: none
+
+            &:hover
+                cursor: pointer
+                fill: utils.$gold
+
+    &__nav
+        width: 100%
+        display: none
+        +utils.responsive('litle-tablet')
+            +utils.flex(row, space-around, center)
+
+
+.header-pages-nav-list
+    width: 100%
+    display: none
+    +utils.flex(column, center, center)
+    +utils.responsive('litle-tablet')
+        display: flex
+        +utils.flex(row, space-around, center)
+    
+    &__element
+        margin: 1rem
+
+        &--link
+            &:hover
+                color: utils.$gold
+
+.hide
+    display: none
+
+.show
+    display: flex

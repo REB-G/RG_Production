@@ -1,0 +1,52 @@
+@use "../utils/_main" as utils
+
+.nav
+    display: none
+    +utils.responsive('litle-tablet')
+        display: flex
+        width: 100%
+        transition: opacity 3s ease-in-out
+
+    &__logo
+        width: 15rem
+        transition: opacity 3s ease-in-out
+
+    &__list
+        width: 100%
+        +utils.flex(column, space-around, center)
+        +utils.responsive('litle-tablet')
+            +utils.flex(row, space-around, center)
+
+        &--element
+            &:hover
+                color: utils.$gold
+
+.phone-nav-svg
+    width: 1.5rem
+    fill: utils.$grey
+    margin-left: 75%
+    +utils.responsive('litle-tablet')
+        display: none
+
+    &:hover
+        cursor: pointer
+        fill: utils.$gold
+
+.show-phone-nav
+    display: flex
+    height: 15%
+
+.hide-phone-size
+    display: none
+    +utils.responsive('litle-tablet')
+        display: flex
+
+.hide-phone-nav-svg
+    display: none
+
+.hide-logo
+    opacity: 0
+    visibility: hidden
+    height: 0
+    width: 0
+    transition: opacity 5s ease-in-out

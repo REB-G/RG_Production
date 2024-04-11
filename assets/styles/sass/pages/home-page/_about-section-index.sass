@@ -1,0 +1,68 @@
+@use "../../utils/_main" as utils
+
+.about-index
+    +utils.flex(row, center, center)
+    margin-top: 10%
+
+    &__text-section
+        width: 50%
+        height: 50%
+        padding: 10%
+        +utils.flex(column, center, center)
+
+        &--title
+            font-size: 1.8rem
+            margin-bottom: 5%
+
+        &--text
+            font-size: 1.3rem
+            +utils.flex(column, center, center)
+
+        &--quote-svg-1
+            fill: utils.$gold
+            width: 5rem
+            transform: rotate(-45deg)
+            margin-bottom: 20%
+            position: absolute
+            margin-right: 34%
+
+        &--quote-svg-2
+            fill: utils.$gold
+            width: 5rem
+            transform: rotate(135deg)
+            margin-left: 33%
+            position: absolute
+            margin-top: 21%
+
+    &__squares-design
+        +utils.flex(row, center, center)
+
+        &--svg-square-1
+            fill: #8F6E5D
+            width: 35%
+            transform: rotate(45deg)
+            z-index: -1
+            position: absolute
+            top: 135%
+            opacity: 0.7
+
+        &--svg-square-2
+            fill: #8F6E5D
+            width: 35%
+            transform: rotate(30deg)
+            z-index: -1
+            position: absolute
+            top: 135%
+            opacity: 0.7
+
+    &__image-section
+        width: 50%
+        height: 50%
+        +utils.flex(row, center, center)
+
+        &--image
+            width: 70%
+
+
+.description-text-of-about-section-index
+    text-align: center
