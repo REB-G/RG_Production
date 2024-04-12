@@ -13,7 +13,7 @@ class HomePageController extends AbstractController
     public function index(HomePageRepository $homePageRepository): Response
     {
         return $this->render('home_page/index.html.twig', [
-            'home_pages' => $homePageRepository->findAll(),
+            'homePages' => $homePageRepository->findAll(),
         ]);
     }
 }

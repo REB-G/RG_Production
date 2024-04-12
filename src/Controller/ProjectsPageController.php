@@ -13,7 +13,7 @@ class ProjectsPageController extends AbstractController
     public function index(ProjectsPageRepository $projectsPageRepository): Response
     {
         return $this->render('projects_page/index.html.twig', [
-            'projects_pages' => $projectsPageRepository->findAll(),
+            'projectsPages' => $projectsPageRepository->findAll(),
         ]);
     }
 }

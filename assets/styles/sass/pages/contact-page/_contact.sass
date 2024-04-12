@@ -11,6 +11,21 @@
         background-color: utils.$grey
         +utils.flex(column, center, center)
 
+    &__error-message
+        +utils.flex(column, center, center)
+        margin-bottom: 15%
+        padding: 5%
+        background-color: utils.$red
+
+        &--link-to-form-contact
+            margin-top: 5%
+            text-decoration: underline
+            text-underline-offset: 0.2rem
+            cursor: pointer
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$gold
+
     &__title
         text-align: center
 
@@ -38,6 +53,14 @@
     &__type-info
         font-size: 1.3rem
         margin: 5%
+
+        &--form-contact
+            text-decoration: underline
+            text-underline-offset: 0.2rem
+            cursor: pointer
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$gold
 
     &__info
         &:hover
