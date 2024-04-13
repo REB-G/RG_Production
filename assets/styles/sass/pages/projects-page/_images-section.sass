@@ -1,0 +1,33 @@
+@use "../../utils/_main" as utils
+
+.images-section
+    +utils.flex(row, center, center)
+    width: 90%
+    margin-top: 10%
+    margin-bottom: 10%
+    +utils.responsive('tablet')
+        width: 70%
+
+    &__image-link
+        max-width: 20%
+
+    &__image
+        width: 100%
+        transition: transform 0.3s ease
+        &:hover
+            transform: scale(1.1)
+
+    &__nutrisain-logo
+        transform: rotate(-25deg)
+
+    &__le-quai-antique-logo
+        transform: rotate(25deg)
+
+    &__nwstudio-logo
+        transform: rotate(-25deg)
+
+    &__pictury-logo
+        transform: rotate(25deg)
+
+    &__jeu-pierre-feuille-ciseaux-logo
+        transform: rotate(-25deg)

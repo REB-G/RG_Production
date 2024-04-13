@@ -1,11 +1,6 @@
 @use "../../utils/_main" as utils
 
 .contact-page
-    background-color: utils.$grey
-    color: black
-    +utils.flex(column, center, center)
-    padding-top: 10%
-    padding-bottom: 10%
 
     &__div-for-background
         background-color: utils.$grey
@@ -28,6 +23,7 @@
 
     &__title
         text-align: center
+        +utils.title-typo()
 
     &__informations
         margin-top: 5%
@@ -51,7 +47,6 @@
         fill: utils.$gold
 
     &__type-info
-        font-size: 1.3rem
         margin: 5%
 
         &--form-contact

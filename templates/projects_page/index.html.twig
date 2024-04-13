@@ -6,7 +6,43 @@
 <div class="section-to-show-at-start-pages js-section-to-show-at-start-pages">
     <img class="header-projects__logo" src="{{asset('build/images/logo.png')}}" alt="Logo de RG Production">
 </div>
-<main class="contact-page js-main-section-pages hide">
-
+<main class="main-section-pages projects-page js-main-section-pages hide">
+    <section>
+    {% for page in projectsPages %}
+        <h1 class="projects-page__title">{{page.pageTitle}}</h1>
+        <p class="projects-page__text">{{page.pageText}}</p>
+    {% endfor %}
+    </section>
+    <section class="images-section">
+        <a href="https://nutrisain.tech" target="_blank" class="images-section__image-link">
+            <img class="images-section__image images-section__nutrisain-logo" src="{{asset('build/images/logo_nutrisain.png')}}" alt="">
+        </a>
+        <a href="https://lequaiantique.me" target="_blank" class="images-section__image-link">
+            <img class="images-section__image images-section__le-quai-antique-logo" src="{{asset('build/images/logo-le-quai-antique.png')}}" alt="">
+        </a>
+        <a href="https://nw-studio.works" target="_blank" class="images-section__image-link">
+            <img class="images-section__image images-section__nwstudio-logo" src="{{asset('build/images/logo-nwstudio.png')}}" alt="">
+        </a>
+        <a href="https://pictury-photography-association.netlify.app" target="_blank" class="images-section__image-link">
+            <img class="images-section__image images-section__pictury-logo" src="{{asset('build/images/logo_pictury.png')}}" alt="">
+        </a>
+        <a href="https://game-pierre-feuille-ciseaux.netlify.app" target="_blank" class="images-section__image-link">
+            <img class="images-section__image images-section__jeu-pierre-feuille-ciseaux-logo" src="{{asset('build/images/logo_game_pierre_feuille_ciseaux.png')}}" alt="">
+        </a>
+    </section>
+    <section>
+        <ul class="projects-list">
+        {% for project in projects %}
+            <li class="projects-list__element">
+                <img class="projects-list__element--image" src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="Logo de {{project.name}}">
+                <div class="projects-list__element--infos">
+                    <h2 class="projects-list__element--title">{{project.name}}</h2>
+                    <p class="projects-list__element--text">{{project.description}}</p>
+                    <a class="projects-list__element--link" href="{{project.link}}">Visiter le site</a>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    </section>
 </main>
 {% endblock %}

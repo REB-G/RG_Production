@@ -41,10 +41,18 @@
     
     &__element
         margin: 1rem
+        +utils.header-typo()
 
         &--link
             &:hover
                 color: utils.$gold
+
+.main-section-pages
+    background-color: utils.$grey
+    color: black
+    +utils.flex(column, center, center)
+    padding-top: 10%
+    padding-bottom: 10%
 
 .hide
     display: none

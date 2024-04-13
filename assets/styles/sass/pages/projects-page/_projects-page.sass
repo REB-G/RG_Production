@@ -1,0 +1,13 @@
+@use "../../utils/_main" as utils
+
+.projects-page
+    +utils.flex(column, center, center)
+
+    &__title
+        +utils.title-typo()
+        text-align: center
+
+    &__text
+        +utils.text-typo()
+        text-align: center
+        margin-top: 5%

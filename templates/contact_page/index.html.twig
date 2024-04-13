@@ -6,7 +6,7 @@
 <div class="section-to-show-at-start-pages js-section-to-show-at-start-pages">
     <img class="header-projects__logo" src="{{asset('build/images/logo.png')}}" alt="Logo de RG Production">
 </div>
-<main class="contact-page js-main-section-pages hide">
+<main class="main-section-pages contact-page js-main-section-pages hide">
     {% for message in app.flashes('error-message') %}
     <section class="contact-page__error-message">
         <p id='js_user-profil_updated'>{{message}}</p>
