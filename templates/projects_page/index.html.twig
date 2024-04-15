@@ -33,7 +33,7 @@
     <section>
         <ul class="projects-list">
         {% for project in projects %}
-            <li class="projects-list__element">
+            <li class="projects-list__element project-invisible">
                 <img class="projects-list__element--image" src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="Logo de {{project.name}}">
                 <div class="projects-list__element--infos">
                     <h2 class="projects-list__element--title">{{project.name}}</h2>

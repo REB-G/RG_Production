@@ -1,13 +1,18 @@
 @use "../../utils/_main" as utils
 
 .projects-contact-section
-    +utils.flex(row, center, center)
+    margin-top: 15%
     width: 100%
+    +utils.flex(column, center, center)
+    +utils.responsive('litle-tablet')
+        margin-top: 0
+        +utils.flex(row, center, center)
 
     &__projects
-        width: 50%
-        height: 50%
         +utils.flex(column, center, center)
+        +utils.responsive('litle-tablet')
+            width: 50%
+            height: 50%
 
         &--text
             margin: 5%
@@ -25,11 +30,12 @@
 
 .contact-section-index
     +utils.flex(column, center, center)
-    width: 50%
-    height: 50%
     color: black
     padding-top: 15%
     padding-bottom: 15%
+    +utils.responsive('litle-tablet')
+        width: 50%
+        height: 50%
 
     &__div-for-background
         background-color: utils.$grey

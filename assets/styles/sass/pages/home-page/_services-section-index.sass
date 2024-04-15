@@ -1,26 +1,37 @@
 @use "../../utils/_main" as utils
 
 .services-index
-    +utils.flex(row, center, center)
+    +utils.flex(column-reverse, center, center)
     margin-top: 15%
+    +utils.responsive('litle-tablet')
+        +utils.flex(row, center, center)
 
     &__image-section
-        width: 50%
-        height: 50%
+        margin-top: 10%
         +utils.flex(row, center, center)
+        +utils.responsive('litle-tablet')
+            margin-top: 0
+            width: 50%
+            height: 50%
 
         &--image
             width: 100%
-            max-width: 70%
+            max-width: 90%
+            +utils.responsive('big-phone')
+                max-width: 80%
+            +utils.responsive('litle-tablet')
+                max-width: 70%
 
     &__text-section
-        width: 50%
-        height: 50%
         +utils.flex(column, center, center)
         padding: 5%
+        +utils.responsive('litle-tablet')
+            width: 50%
+            height: 50%
 
         &--title
             margin-bottom: 5%
+            text-align: center
 
         &--text
             +utils.flex(column, center, center)

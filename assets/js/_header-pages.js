@@ -18,4 +18,6 @@ const phoneMenu = () => {
     })
 }
 
-phoneMenu()
+if(phoneMenuSvg) {
+    phoneMenu()
+}
