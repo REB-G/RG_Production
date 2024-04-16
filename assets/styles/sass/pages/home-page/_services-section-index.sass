@@ -33,8 +33,19 @@
             margin-bottom: 5%
             text-align: center
 
-        &--text
+        &--div-text
             +utils.flex(column, center, center)
 
-.description-text-of-services-section-index
-    text-align: center
+        &--text
+            text-align: center
+
+        &--text-link
+            margin-top: 5%
+
+        &--link
+            text-decoration: underline
+            text-underline-offset: 0.2rem
+            cursor: pointer
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$gold

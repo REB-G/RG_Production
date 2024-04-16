@@ -1,0 +1,40 @@
+@use "../../utils/_main" as utils
+
+.e-commerce-service
+    +utils.flex(row, center, space-between)
+    margin-top: 15%
+
+    &__text-section
+        +utils.flex(column, center, flex-start)
+        width: 50%
+        margin-left: 3vw
+
+        &--title
+            text-align: left
+
+        &--description
+            text-align: justify
+            margin-top: 5%
+            margin-bottom: 5%
+
+        &--contact-link
+            text-decoration: underline
+            text-underline-offset: 0.2rem
+            cursor: pointer
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$gold
+
+    &__svg-div
+        +utils.flex(row, flex-end, center)
+        width: 50%
+        padding-right: 3vw
+        position: relative
+
+        // &--svg
+        //     width: 15%
+        //     fill: utils.$gold
+
+        &--image
+            width: 100%
+            max-width: 90%

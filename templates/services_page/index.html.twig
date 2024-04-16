@@ -7,6 +7,64 @@
     <img class="header-projects__logo" src="{{asset('build/images/logo.png')}}" alt="Logo de RG Production">
 </div>
 <main class="main-section-pages js-main-section-pages hide">
-
+    <section class="services-page-discover-section">
+        {% for page in servicesPage %}
+            <h1 class="services-page-discover-section__title">{{page.pageTitle}}</h1>
+            <p class="services-page-discover-section__text">{{page.pageText}}</p>
+        {% endfor %}
+    </section>
+    <section class="design-service">
+        <div class="design-service__text-section">
+            <h2 class="design-service__text-section--title">Design graphique</h2>
+            <p class="design-service__text-section--description">Création de logo et mise en place de charte graphique pour donner une identité visuelle unique à votre entreprise. Ensemble, nous définirons les éléments clés qui refléteront au mieux votre image de marque.</p>
+            <a href="{{ path('app_contact_page') }}" class="design-service__text-section--contact-link">Nous contacter</a>
+        </div>
+        <div class="design-service__svg-div js-div-animated-svg">
+            {# <svg class="animated-svg design-service__svg-div--svg animated-svg-invisible" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg> #}
+            <img class="design-service__svg-div--image" src="{{asset('build/images/design-graphique.jpg')}}" alt="">
+        </div>
+    </section>
+    {# <section>
+        <div>
+            <h1>Création de site One-Page</h1>
+            <p>Vous avez besoin d'une présence en ligne simple mais efficace ? Je réalise des sites web One-Page qui mettent en avant votre activité de manière concise et attrayante. Idéal pour les portfolios ou les présentations d'événements.</p>
+            <a href="">Nous contacter</a>
+        </div>
+        <img src="" alt="">
+    </section> #}
+    <section class="web-site-service">
+        <div class="web-site-service__text-section">
+            <h2 class="web-site-service__text-section--title">Création de site vitrine</h2>
+            <p class="web-site-service__text-section--description">Chaque site vitrine que je conçois est pensé pour répondre à vos besoins spécifiques et refléter l'identité unique de votre entreprise. Des designs modernes et intuitifs combinés à une navigation fluide garantissent une expérience utilisateur agréable pour vos visiteurs.
+                Que vous souhaitiez attirer de nouveaux clients, renforcer votre crédibilité en ligne ou simplement partager votre histoire, un site vitrine professionnel est un outil indispensable pour atteindre vos objectifs commerciaux. Contactez-moi dès aujourd'hui pour discuter de votre projet et commencer à construire votre présence en ligne.</p>
+            <a href="{{ path('app_contact_page') }}" class="web-site-service__text-section--contact-link">Nous contacter</a>
+        </div>
+        <div class="web-site-service__svg-div">
+            {# <svg class="animated-svg web-site-service__svg-div--svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM153 289l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L71 337c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM265 255l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg> #}
+            <img class="web-site-service__svg-div--image" src="{{asset('build/images/web-site-creation.jpg')}}" alt="">
+        </div>
+    </section>
+    <section class="e-commerce-service">
+        <div class="e-commerce-service__text-section">
+            <h2 class="e-commerce-service__text-section--title">Création de site e-commerce avec WooCommerce</h2>
+            <p class="e-commerce-service__text-section--description">Vous souhaitez vendre vos produits en ligne ? Je développe des boutiques en ligne avec WooCommerce, une solution puissante et flexible intégrée à WordPress. Des fonctionnalités de gestion des produits, des paiements sécurisés et une expérience utilisateur optimale pour vos clients.</p>
+            <a href="{{ path('app_contact_page') }}" class="e-commerce-service__text-section--contact-link">Nous contacter</a>
+        </div>
+        <div class="e-commerce-service__svg-div">
+            {# <svg class="animated-svg e-commerce-service__svg-div--svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm97 289c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L79 303c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31 31-31zM257 255c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9l-48-48z"/></svg> #}
+            <img class="web-site-service__svg-div--image" src="{{asset('build/images/e-commerce.jpg')}}" alt="">
+        </div>
+    </section>
+    <section class="maintenance-service">
+        <div class="maintenance-service__text-section">
+            <h2 class="maintenance-service__text-section--title">Maintenance</h2>
+            <p class="maintenance-service__text-section--description">La maintenance régulière de votre site web est essentielle pour assurer son bon fonctionnement et sa sécurité. Je propose des services de maintenance pour mettre à jour votre site, maintenir le code à jour, corriger les bugs et garantir sa performance à long terme.</p>
+            <a href="{{ path('app_contact_page') }}" class="maintenance-service__text-section--contact-link">Nous contacter</a>
+        </div>
+        <div class="maintenance-service__svg-div">
+            {# <svg class="animated-svg maintenance-service__svg-div--svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4h54.1l109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109V104c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7H352c-8.8 0-16-7.2-16-16V102.6c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg> #}
+            <img class="web-site-service__svg-div--image" src="{{asset('build/images/maintenance.jpg')}}" alt="">
+        </div>
+    </section>
 </main>
 {% endblock %}

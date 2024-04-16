@@ -13,7 +13,7 @@ class ServicesPageController extends AbstractController
     public function index(ServicesPageRepository $servicesPageRepository): Response
     {
         return $this->render('services_page/index.html.twig', [
-            'servicesPages' => $servicesPageRepository->findAll(),
+            'servicesPage' => $servicesPageRepository->findAll(),
         ]);
     }
 }
