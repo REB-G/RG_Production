@@ -1,0 +1,24 @@
+@use "../../utils/_main" as utils
+
+.legals
+    +utils.flex(column, center, center)
+    padding-left: 5vw
+    padding-right: 5vw
+
+    &__title
+        margin-bottom: 10vh
+
+.legals-section
+    +utils.flex(column, center, flex-start)
+    margin-bottom: 10vh
+
+    &__title
+        margin-bottom: 5vh
+
+    &__text
+        margin-bottom: 2vh
+        text-align: justify
+
+    &__div
+        margin-bottom: 5vh
+        text-align: justify
