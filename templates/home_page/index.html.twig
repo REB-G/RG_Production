@@ -21,6 +21,13 @@
             </li>
         </ul>
     </nav>
+    {% for message in app.flashes('form-contact-send-with-success-message') %}
+    {# <section class="contact-page__error-message">
+        <p>{{message}}</p>
+        <a href="#modify-form-contact" class="contact-page__error-message--link-to-form-contact js-error-message-link-to-form-contact">Modifier le formulaire de contact</a>
+    </section> #}
+    <p id="js-form-contact-sent-message" class="form-contact-sent-success-message">{{message}}</p>
+    {% endfor %}
     <img class="header__logo" src="{{asset('build/images/logo.png')}}" alt="Logo de RG Production">
     <div class="header__discover-us hide js-discover-us-section">
         <p class="header__discover-us--text">Dévouvrez-nous</p>

@@ -1,13 +1,24 @@
 @use "../../utils/_main" as utils
 
 .design-service
-    +utils.flex(row, center, space-between)
-    margin-top: 10%
+    +utils.flex(column, center, center)
+    margin-top: 12%
+    +utils.responsive('litle-tablet')
+        +utils.flex(row, center, stretch)
+        margin-top: 10%
 
     &__text-section
         +utils.flex(column, center, flex-start)
-        width: 50%
-        margin-left: 3vw
+        width: 80%
+        height: 80%
+        padding: 3vw
+        box-shadow: 5px 5px 5px 1px #b5b5b5
+        background-color: #e3e2e2
+        +utils.responsive('litle-tablet')
+            height: auto
+            width: 50%
+            margin-left: 3vw
+            margin-right: 1vw
 
         &--title
             text-align: left
@@ -25,16 +36,17 @@
                 color: utils.$gold
                 text-decoration-color: utils.$gold
 
-    &__svg-div
-        +utils.flex(row, flex-end, center)
-        width: 50%
-        padding-right: 3vw
-        position: relative
-
-        // &--svg
-        //     width: 15%
-        //     fill: utils.$gold
+    &__image-div
+        +utils.flex(row, center, center)
+        width: 80%
+        margin-top: 5%
+        +utils.responsive('litle-tablet')
+            +utils.flex(row, flex-end, center)
+            width: 50%
+            padding-right: 3vw
+            margin-left: 1vw
+            margin-top: 0
 
         &--image
             width: 100%
-            max-width: 90%
+            max-width: 100%

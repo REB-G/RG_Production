@@ -2,6 +2,10 @@
 
 .services-page-discover-section
     +utils.flex(column, center, center)
+    padding-left: 3vw
+    padding-right: 3vw
+    +utils.responsive('litle-tablet')
+        padding: 0
 
     &__title
         text-align: center
@@ -10,21 +14,3 @@
     &__text
         text-align: center
         margin-top: 5%
-
-// .animated-svg
-//     position: absolute
-//     top: +25%
-//     left: +50%
-//     animation: moveSVG 10s linear infinite
-
-// @keyframes moveSVG
-//     0%
-//         transform: translate(0, calc(25% + 10vh))
-//     25%
-//         transform: translate(calc(25% + 10vw), 0)
-//     50%
-//         transform: translate(0, calc(25% - 10vh))
-//     75%
-//         transform: translate(calc(25% - 10vw), 0)
-//     100%
-//         transform: translate(0, calc(25% + 10vh))

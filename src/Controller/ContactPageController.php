@@ -22,7 +22,7 @@ class ContactPageController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $formContactRepository->save($formContact, true);
-            $this->addFlash('message', 'Formulaire de contact envoyé avec succès !');
+            $this->addFlash('form-contact-send-with-success-message', 'Formulaire de contact envoyé avec succès !');
             return $this->redirectToRoute('app_home_page', [], Response::HTTP_SEE_OTHER);
         } elseif ($form->isSubmitted() && !$form->isValid()) {
             $this->addFlash('error-message', 'Une erreur est survenue lors de l\'envoi du formulaire de contact. Veuillez réessayer.');
