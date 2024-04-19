@@ -6,11 +6,9 @@ const headerDiscoverUsLink = document.querySelector('.js-discover-us-section')
 const svgHeaderDiscoverUs = document.querySelector('.js-discover-us-svg')
 
 const startForIndexPage = () => {
-    document.addEventListener("DOMContentLoaded", (event) => {
         start()
         showHeaderDiscoverUsLink()
         showMainSection()
-    })
 }
 
 const start = () => {
