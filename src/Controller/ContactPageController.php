@@ -31,7 +31,7 @@ class ContactPageController extends AbstractController
                 ->subject('Formulaire de contact reçu')
                 ->htmlTemplate('contact_page/email_form_contact_received.html.twig')
                 ->context([
-                    'url' => $this->generateUrl('app_admin'),
+                    'url' => $this->generateUrl('admin'),
                     'expiration_date' => new \DateTime('+7 days'),
                 ]);
 
