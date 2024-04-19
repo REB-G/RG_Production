@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr-FR">
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}RG Production{% endblock %}</title>
@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="keywords" content="Développement, développeur, développeuse, site, web, site web, application, e-commerce, création de site web, cours informatique, développeur PACA, développeur Golfe de St-Tropez, développeur Sainte-Maxime, développeur Cogolin, développeur Plan de la Tour, développeur Grimaud, création site web, création e-commerce, création site internet, création logo, création carte de visite, création charte graphique">
-		<meta description="RG Production : Votre partenaire de confiance pour le développement web dans le Golfe de St Tropez et dans le PACA. Des sites personnalisés qui s'adaptent à tous les appareils, optimisés pour le référencement naturel et sécurisés. Découvrez comment notre expertise peut propulser votre présence en ligne.">
+		<meta name="description" content="RG Production : Votre partenaire de confiance pour le développement web dans le Golfe de St Tropez et dans le PACA. Des sites personnalisés qui s'adaptent à tous les appareils, optimisés pour le référencement naturel et sécurisés. Découvrez comment notre expertise peut propulser votre présence en ligne.">
         {% block stylesheets %}
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,6 @@
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
     <body>

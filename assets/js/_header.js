@@ -8,7 +8,7 @@ const svgHeaderDiscoverUs = document.querySelector('.js-discover-us-svg')
 const startForIndexPage = () => {
     document.addEventListener("DOMContentLoaded", (event) => {
         start()
-        setTimeout(showHeaderDiscoverUsLink, 1000);
+        showHeaderDiscoverUsLink()
         showMainSection()
     })
 }
