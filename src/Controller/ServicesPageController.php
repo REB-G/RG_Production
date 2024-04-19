@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class ServicesPageController extends AbstractController
 {
-    #[Route('/servicesPage', name: 'app_services_page')]
+    #[Route('/prestations', name: 'app_services_page')]
     public function index(ServicesPageRepository $servicesPageRepository): Response
     {
         return $this->render('services_page/index.html.twig', [
