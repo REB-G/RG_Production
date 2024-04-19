@@ -22,10 +22,6 @@
         </ul>
     </nav>
     {% for message in app.flashes('form-contact-send-with-success-message') %}
-    {# <section class="contact-page__error-message">
-        <p>{{message}}</p>
-        <a href="#modify-form-contact" class="contact-page__error-message--link-to-form-contact js-error-message-link-to-form-contact">Modifier le formulaire de contact</a>
-    </section> #}
     <p id="js-form-contact-sent-message" class="form-contact-sent-success-message">{{message}}</p>
     {% endfor %}
     <img class="header__logo" src="{{asset('build/images/logo.png')}}" alt="Logo de RG Production">
@@ -51,7 +47,7 @@
             <svg class="about-index__squares-design--svg-square-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 0H512V512H0V0z"/></svg>
         </div>
         <div class="about-index__image-section">
-            <img class="about-index__image-section--image" src="{{asset('build/images/laptop.jpg')}}" alt='Ordinateur'>
+            <img class="about-index__image-section--image" src="{{asset('build/images/laptop.jpg')}}" alt="Ordinateur portablle avec un extrait de code à l'écran.">
         </div>
     </section>
     <section class="services-index">

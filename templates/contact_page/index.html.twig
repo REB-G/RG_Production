@@ -9,7 +9,7 @@
 <main class="main-section-pages contact-page js-main-section-pages hide">
     {% for message in app.flashes('error-message') %}
     <section class="contact-page__error-message">
-        <p id='js_user-profil_updated'>{{message}}</p>
+        <p id='js_user-profil_updated' class="contact-page__error-message--message">{{message}}</p>
         <a href="#modify-form-contact" class="contact-page__error-message--link-to-form-contact js-error-message-link-to-form-contact">Modifier le formulaire de contact</a>
     </section>
     {% endfor %}
