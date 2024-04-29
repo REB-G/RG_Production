@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomePageController extends AbstractController
 {
-    #[Route('/', name: 'app_home_page')]
+    #[Route('/', name: 'app_home_page', options: ['sitemap' => ['section' => 'accueil']])]
     public function index(HomePageRepository $homePageRepository): Response
     {
         return $this->render('home_page/index.html.twig', [

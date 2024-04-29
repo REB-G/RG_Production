@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class ProjectsPageController extends AbstractController
 {
-    #[Route('/realisations', name: 'app_projects_page')]
+    #[Route('/realisations', name: 'app_projects_page', options: ['sitemap' => ['section' => 'realisations']])]
     public function index(ProjectsPageRepository $projectsPageRepository, ProjectsRepository $projectsRepository): Response
     {
         return $this->render('projects_page/index.html.twig', [
