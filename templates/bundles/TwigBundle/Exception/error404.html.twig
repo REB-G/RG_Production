@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RG Production - Page introuvable{% endblock %}
+
+{% block body %}
+    <div class="section-to-show-at-start-pages js-section-to-show-at-start-pages">
+        <img class="header-projects__logo" src="{{asset('build/images/logo.png')}}" alt="Logo de RG Production">
+    </div>
+    <main class="error main-section-pages js-main-section-pages hide">
+        <div class='error__design'>
+            <h1 class='error__title'>Page introuvable</h1>
+            <p class='error__info'>La page que vous avez demandée n'existe pas.</p>
+            <a href="{{ path('app_home_page')}}" class='error__link'>Retourner à la page d'accueil</a>
+        </div>
+    </main>
+{% endblock %}
