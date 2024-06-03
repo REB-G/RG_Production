@@ -3,7 +3,13 @@
 .form-contact
     +utils.flex(column, center, center)
     margin-top: 5%
-    width: 50%
+    width: 90%
+    +utils.responsive('big-phone')
+        width: 80%
+    +utils.responsive('tablet')
+        width: 70%
+    +utils.responsive('laptop')
+        width: 50%
 
     &__title
         text-align: center
@@ -37,7 +43,7 @@
         border-radius: 1.5rem
         transition: 0.5s ease-in
         margin: 0.7vw
-        padding: 0.7vw 1.5vw
+        padding: 2vw 2vw
         font-family: utils.$font
         border-color: transparent
         +utils.text-typo()
@@ -45,6 +51,8 @@
             cursor: pointer
             background-color: utils.$grey
             border-color: utils.$black
+        +utils.responsive('tablet')
+            padding: 0.7vw 1.5vw
 
 #form_contact
     +utils.flex(column, center, center)

@@ -32,26 +32,29 @@
     &__informations
         margin-top: 5%
         max-width: 90%
-        +utils.responsive('big-phone')
-            max-width: 100%
+        +utils.flex(column, center, center)
 
         &--description
             text-align: center
 
         &--list-elements
-            margin-top: 5%
+            width: 100%
 
 
 .contact-page-list-element
     +utils.flex(column, center, center)
     margin-top: 15%
+    +utils.responsive('litle-tablet')
+        margin-top: 10%
 
     &__svg
         width: 1.3rem
         fill: utils.$gold
 
     &__type-info
-        margin: 5%
+        margin: 3%
+        +utils.responsive('litle-tablet')
+            margin: 1%
 
         &--form-contact
             text-decoration: underline
